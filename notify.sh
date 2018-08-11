@@ -15,7 +15,7 @@ read -r -d '' WEBHOOK_DATA <<curldataEOT
     {
       "fallback": "Building ${GIT_COMMIT_SHA} (${GIT_COMMIT_BRANCH})\n${GIT_COMMIT_MESSAGE}",
       "color": "#24a2b7",
-      "pretext": "Building `${GIT_COMMIT_SHA}` (${GIT_COMMIT_BRANCH})",
+      "pretext": "Building \`${GIT_COMMIT_SHA}\` \`${GIT_COMMIT_BRANCH}\`",
       "author_name": "${GIT_COMMIT_AUTHOR_NAME}",
       "title": "${GIT_COMMIT_MESSAGE}",
       "title_link": "${GIT_COMMIT_PERMALINK_URL}",
