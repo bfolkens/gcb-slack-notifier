@@ -11,6 +11,9 @@ GIT_PERMALINK_PATTERN="https://github.com/[your-repo]/[your-project]/$GIT_COMMIT
 SLACK_WEBHOOK_URL=[your url]
 ```
 
+Where $GIT_COMMIT_SHA will be replaced with the commit (if quoted properly).  Otherwise,
+you can use the $REVISION_ID substitution from CloudBuild.
+
 ## Example
 
 Add the following to your `cloudbuild.yaml` (replacing vars with your own):
@@ -19,6 +22,6 @@ Add the following to your `cloudbuild.yaml` (replacing vars with your own):
 - name: 'bfolkens/gcb-slack-notifier'
   env:
     - 'SLACK_WEBHOOK_URL=https://hooks.slack.com/services/ABACADABA/DEADBEEF/and0n3m0r3v4r'
-    - 'GIT_PERMALINK_PATTERN="https://github.com/bfolkens/gcb-slack-notifier/$GIT_COMMIT_SHA/"'
+    - 'GIT_PERMALINK_PATTERN="https://github.com/bfolkens/gcb-slack-notifier/$REVISION_ID/"'
 ```
 
