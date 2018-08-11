@@ -25,6 +25,8 @@ read -r -d '' WEBHOOK_DATA <<curldataEOT
 }
 curldataEOT
 
+echo $WEBHOOK_DATA
+
 curl $SLACK_WEBHOOK_URL \
   --header "Content-Type: application/json" \
   --request POST \
